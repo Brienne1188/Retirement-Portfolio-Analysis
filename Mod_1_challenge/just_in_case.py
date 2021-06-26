@@ -199,8 +199,3 @@ with open(output_path,'w', newline='') as output_path:
       csvwriter.writerow(row.values())
 
 # You should now have a new CSV file saved in your specified folder (output_path)
-
-
-
-
-
