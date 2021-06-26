@@ -9,25 +9,28 @@ determine the fair price of the loans.
 
 """Automation of Calculations"""
 
-#list of loan prices 
+# list of loan prices 
 loan_costs = [500, 600, 200, 1000, 450]
 
-#tells us how many loan prices are inside of the loan_costs list, then includes them in a statement
+# tells us how many loan prices are inside of the loan_costs list, then includes them in a statement
+
 print("The number of loans is:", len(loan_costs))
 
-#adds the values in the loan_costs list then includes them in a statement 
+# adds the values in the loan_costs list then includes them in a statement 
+
 print("The total value of the loans:$",sum(loan_costs))
 
 # averages the loan cost values from previous "loan_cost" list data then includes in a stament
+
 print("The average loan amount is:$", (sum(loan_costs) / len(loan_costs)))
 
 
 
-"""Analysis of Loan Data"""
+""" Analysis of Loan Data """
 
 """
 
-**Using a dictionary of additional loan information, we can determine fair price using the following
+*** Using a dictionary of additional loan information, we can determine fair price using the following
 formula;
 
 Present Value = Future Value / (1 + Discount_Rate/12) ** remaining_months
@@ -45,6 +48,7 @@ Present Value = Future Value / (1 + Discount_Rate/12) ** remaining_months
 
 
 # dictionary of loan data
+
 loan = {
     "loan_price": 500,
     "remaining_months": 9,
@@ -54,9 +58,11 @@ loan = {
 
 
 # uses get() function to extract the Future Value on the loan
+
 print("Future Value:$", loan.get("future_value"))
 
 # uses get() function to extract the remaining amount of months on the loan
+
 print("Remaining Months:", loan.get("remaining_months"))
 
 
@@ -67,7 +73,7 @@ discount_rate = 0.2
 present_value = loan.get("future_value") / (1 + discount_rate/12) ** loan.get("remaining_months")
 
 
-#print(present_value)- kept as test tool
+# print(present_value)- kept as test tool
 
 # If Present Value represents what the loan is really worth, does it make sense to buy the loan at its cost?
 # @TODO: Write a conditional statement (an if-else statement) to decide if the present value represents the loan's fair value.
@@ -75,7 +81,9 @@ present_value = loan.get("future_value") / (1 + discount_rate/12) ** loan.get("r
 #    Else, the present value of the loan is less than the loan cost, then print a message that says that the loan is too expensive and not worth the price.
 # YOUR CODE HERE!
 
-#determines present value using .get function using loan list data to 
+# determines present value using .get function which pulls data from loan_price list
+# if the loan data is less than or equal to present value it prints a statement confirming
+# its a good buy, otherwise it will say the loan is not a good buy
 if present_value >= loan.get("loan_price"):
     print("The loan is worth at least the cost to buy it.")
 
@@ -93,8 +101,12 @@ Perform financial calculations using functions.
 2. Use the function to calculate the present value of the new loan given below.
     a. Use an `annual_discount_rate` of 0.2 for this new loan calculation.
 """
+""" Financial Calulations
+    
+    This function can be used with any newly uploaded loan data """
 
-# Given the following loan data, you will need to calculate the present value for the loan
+
+# new list of loan data
 new_loan = {
     "loan_price": 800,
     "remaining_months": 12,
@@ -102,10 +114,11 @@ new_loan = {
     "future_value": 1000,
 }
 
-# @TODO: Define a new function that will be used to calculate present value.
-#    This function should include parameters for `future_value`, `remaining_months`, and the `annual_discount_rate`
-#    The function should return the `present_value` for the loan.
-# YOUR CODE HERE!
+ 
+#   Using calculate_present_value as a calculating function we give paramaters of `future_value`, `remaining_months`,
+#   and the `annual_discount_rate`
+
+#   This function gives us the `present_value` for the loan. 
 
 def calculate_present_value(future_value, remaining_months, annual_discount_rate):
     discount_rate = annual_discount_rate
@@ -113,9 +126,7 @@ def calculate_present_value(future_value, remaining_months, annual_discount_rate
     return present_value
 
 
-# @TODO: Use the function to calculate the present value of the new loan given below.
-#    Use an `annual_discount_rate` of 0.2 for this new loan calculation.
-# YOUR CODE HERE!
+# This function recalcutlates the present value using an annual discount rate of 2-%
 
 calculate_present_value(new_loan.get("future_value"),new_loan.get("remaining_months"),0.2)
 
