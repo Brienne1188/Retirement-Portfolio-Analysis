@@ -13,7 +13,7 @@ Part 1: Automation of Calculations
 Part 2: Analysis of Loan Data
 Part 3: Financial Calulations
 Part 4: Conditionally filters lists of loans
-Part 5: Save the results
+Part 5: Save results to CSV file
 
 """
 
