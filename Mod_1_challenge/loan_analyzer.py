@@ -24,15 +24,12 @@ Part 5: Save the results
 loan_costs = [500, 600, 200, 1000, 450]
 
 # tells us how many loan prices are inside of the loan_costs list, then includes them in a statement
-
 print("The number of loans is:", len(loan_costs))
 
 # adds the values in the loan_costs list then includes them in a statement 
-
 print("The total value of the loans:$",sum(loan_costs))
 
 # averages the loan cost values from previous "loan_cost" list data then includes in a stament
-
 print("The average loan amount is:$", (sum(loan_costs) / len(loan_costs)))
 
 
