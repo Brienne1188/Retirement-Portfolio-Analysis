@@ -129,7 +129,7 @@ This is will filter your lists of loan prices/values based on your specification
 take the desired data and put it into a new list for clean reading.
 
 """
-#list of dictionaries containing loan data
+# list of dictionaries containing loan data
 loans = [
     {
         "loan_price": 700,
