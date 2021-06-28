@@ -11,7 +11,7 @@ at the best possible value.
 This program is organized into five parts;
 Part 1: Automation of Calculations
 Part 2: Analysis of Loan Data
-Part 3: Financial Calulations
+Part 3: Financial Calculations
 Part 4: Conditionally filters lists of loans
 Part 5: Save results to CSV file
 
@@ -92,7 +92,7 @@ else :
     print("The loan is too expensive and not worth the price")
 
 
-""" Part 3: Financial Calulations - This function can be used with any newly uploaded loan data """
+""" Part 3: Financial Calculations - This function can be used with any newly uploaded loan data """
 
 
 # new list of loan data
@@ -125,11 +125,11 @@ print(f"The present value of the loan is:$ {round(present_value, 2)}")
 
 """Part 4: Conditionally filters lists of loans.
 
-This is will filter your lists of loan prices/values based on your specifcations and 
+This is will filter your lists of loan prices/values based on your specifications and 
 take the desired data and put it into a new list for clean reading.
 
 """
-#list of dictionaries containing loan data
+# list of dictionaries containing loan data
 loans = [
     {
         "loan_price": 700,
